@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css">
+
+    
+  </head>
+
+  <body>
+  
+    <div class="hero-image">
+      <div class="navbar">
+        <div id="logo">
+        <img src="./img/logo.png" class="logo" alt="./img/logo.png">
+        </div>
+      <ul>
+          <li><a href="#biografia">Biografia</a></li>
+          <li><a href="#viajes">Viajes</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#logros">Logros</a></li>
+          <li><a href="#footer">Contacto</a></li>
+         
+      </ul>
+
+      </div>
+      </div>
+    </div>
+
+  
+  
+  
+    
+   <main>
+    
+      
+     <section id="biografia">
+
+        <h1>John von Neumannas</h1>
+
+       
+        <div id="centrar">
+          <img src="./img/jonh.png"  alt="./img/JohnvonNeumann">
+        </div>
+
+            <p>John von Neumann (registrado al nacer como Neumann János Lajos; Budapest, Imperio austrohúngaro, 28 de diciembre de 1903-Washington D. C., 
+              Estados Unidos, 8 de febrero de 1957) fue un matemático húngaro-estadounidense que realizó contribuciones fundamentales en física cuántica, 
+              análisis funcional, teoría de conjuntos, teoría de juegos, ciencias de la computación, economía, análisis numérico, cibernética, hidrodinámica, 
+              estadística y muchos otros campos. Se le considera uno de los matemáticos más importantes del siglo xx
+
+              <p>
+              Neumann János Lajos nació en Budapest en 1903, cuando esta ciudad pertenecía al Imperio austrohúngaro. Su padre, Max Neumann, 
+              era un banquero judío que se había casado con Margaret Kann, hija de una familia adinerada de Pest. El padre de John, Max Neumann, 
+              recibió el 20 de febrero de 1913 la nobleza húngara donada por el emperador Francisco José de Austria-Hungría. De esta manera, John, 
+              que en Hungría ya utilizaba la forma germanizada de su nombre, solía presentarse como Johann von Neumann. Él fue el mayor de tres hermanos 
+              y a los diez años comenzó a estudiar en el Colegio Luterano de Budapest. Sus profesores pronto se dieron cuenta de su talento y recomendaron que recibiera clases particulares 
+              de matemáticas impartidas por profesores universitarios.</p>
+
+              <p></p>
+          </div>
+            
+            
+
+      </section>
+
+
+      <section id="viajes">
+
+        <h1>Primeros viajes y emigración a Estados Unidos (1929-1938)</h1>
+        <p>En 1929 la Universidad de Princeton les ofreció a von Neumann y a Wigner una invitación para un semestre y allí acudió acompañado de su novia Mariette Koevesi, 
+          con la que se casaría ese mismo año y tendría en 1935 una hija, Marina, que llegaría a ser una distinguida economista.6​ Durante los años siguientes alternaba sus estancias entre Alemania y Estados Unidos, 
+          pero en 1933 la llegada de los nazis al poder hizo que los profesores judíos fuesen progresivamente expulsados de sus puestos. Von Neumann se encontró con la facilidad de estar ya establecido en los Estados 
+          Unidos y de que el Instituto de Estudios Avanzados de Princeton comenzó a funcionar ese mismo año, y fue elegido como uno de los primeros profesores junto con Albert Einstein, Oswald Veblen, Hermann Weyl y 
+          James W. Alexander.​</p>
+
+          <p>Aunque llevaban una intensa vida social y su casa de Princeton era lugar de encuentro habitual para fiestas sociales, su relación matrimonial se fue deteriorando y, finalmente, 
+            acabó divorciándose de Mariette en 1937. Al año siguiente viajó a Europa y daba conferencias e intercambiaba ideas con científicos como Niels Bohr, con quien coincidió en Copenhague. 
+            Visitó también a su familia en Hungría y, antes de regresar a Estados Unidos, se casó con su amiga húngara Klara Dan</p>
+
+
+
+
+
+     </section>
+
+
+
+     <section id="galeria">
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="./img/1.PNG" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="./img/2.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="./img/3.png" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+     </section>
+
+     <section id="logros">
+
+      <h1>EL PRINCIPAL LOGRO JOHN VON NEUMANN</h1>
+
+      <P>Von Neumann le dio su nombre a la arquitectura de von Neumann, utilizada en casi todos los computadores, 
+        por su publicación del concepto; aunque muchos piensan que este nombramiento ignora la contribución de 
+        J. Presper Eckert y John William Mauchly, quienes contribuyeron al concepto durante su trabajo en ENIAC.
+        ​ Virtualmente, cada computador personal, microcomputador, minicomputador y supercomputador es una máquina de von Neumann. 
+        También creó el campo de los autómatas celulares sin computadores, construyendo los primeros ejemplos de autómatas 
+        autorreplicables con lápiz y papel. El concepto de constructor universal fue presentado en su trabajo póstumo Teoría 
+        de los autómatas autorreproductivos. El término «máquina de von Neumann» se refiere alternativamente a las máquinas
+         autorreplicativas. Von Neumann probó que el camino más efectivo para las operaciones mineras a gran escala, 
+         como minar una luna entera o un cinturón de asteroides, es a través del uso de máquinas autorreplicativas, 
+         para aprovechar el crecimiento exponencial de tales mecanismos.</P>
+
+         <p>Además de su trabajo en arquitectura computacional, von Neumann ofreció una contribución al estudio de algoritmos. 
+          Donald Knuth considera a von Neumann el inventor, en 1945, del conocido algoritmo merge sort, en el cual la primera y
+           segunda mitad de un array (vector) se clasifican recursivamente por separado y luego se fusionan juntas. Otro trabajo
+            notable por von Neumman ha sido publicado en 1946 con el desarrollo del primer algoritmo Generador de números pseudoaleatorios 
+            conocido como Cuadrado Medio 17​. A pesar de las debilidades del algoritmo, influyó a otros grandes investigadores y 
+            cientistas en este campo de estudio en la informática.</p>
+
+         <p>También participó en la investigación de problemas en el campo de la hidrodinámica numérica. Junto con R. D. Richtmyer 
+          desarrolló un algoritmo para definir la viscosidad artificial, que probó la esencia para el entendimiento de las ondas de choque.
+           Puede decirse que no sería posible entender mucho de astronáutica y ni siquiera podrían haberse desarrollado los reactores y 
+           los motores espaciales sin ese trabajo. El problema era que cuando los computadores resuelven problemas hidro o aerodinámicos,
+            buscan poner muchos puntos de rejilla (o malla, en inglés grid) computacionales en regiones con onda de choque de discontinuidad 
+            aguda. La viscosidad artificial era un truco matemático para suavizar levemente la transición del choque sin sacrificar 
+            la física básica</p>
+
+     </section>
+
+
+    
+
+    </main>
+
+
+
+
+
+
+    <section id="footer">
+
+      <footer>
+       <p>Autor: Pablo Solano Colorado</p>
+        <ul>
+          <li>ENLACES DONDE SE HAN COGIDO INFORMACION Y FOTOS</li>
+          <li><a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.exevi.com%2Fwp-content%2Fuploads%2F2020%2F01%2Fjohn-von-neumann-y-el-edvac.jpg&imgrefurl=https%3A%2F%2Fwww.exevi.com%2Fjohn-von-neumann-padre-de-la-guerra-fria-y-de-los-ordenadores-modernos%2F&tbnid=hqTOswhGDJ9NzM&vet=12ahUKEwiWlKaciuX7AhVxlycCHUyQD0AQMygPegUIARD3AQ..i&docid=VBdmAITcF0agjM&w=1200&h=720&q=john%20von%20neumann&safe=active&ved=2ahUKEwiWlKaciuX7AhVxlycCHUyQD0AQMygPegUIARD3AQ">BANNER</a></li>
+          <li><a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.eldiario.es%2Fclip%2F0de48c09-0313-4c36-81a0-96695bc89382_16-9-aspect-ratio_default_0.jpg&imgrefurl=https%3A%2F%2Fwww.eldiario.es%2Ftecnologia%2Fdiario-turing%2Fjohn-neumann-revolucionando-computacion-manhattan_1_2705516.html&tbnid=KaIAZDb0dgdoNM&vet=12ahUKEwiWlKaciuX7AhVxlycCHUyQD0AQMygBegUIARDZAQ..i&docid=WpFxKcXEBjzpQM&w=880&h=495&q=john%20von%20neumann&safe=active&ved=2ahUKEwiWlKaciuX7AhVxlycCHUyQD0AQMygBegUIARDZAQ">IMGEN 1</a></li>
+          <li><a href="https://matematicasdesdecero.com/matematicos-destacados/john-von-neumann/">CARRUSEL 1</a></li>
+          <li><a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.eldiario.es%2Fclip%2F8a54fad0-06f0-48e6-8a7e-e6188ac77752_16-9-aspect-ratio_default_0.jpg&imgrefurl=https%3A%2F%2Fwww.eldiario.es%2Ftecnologia%2Fdiario-turing%2Fjohn-neumann-revolucionando-computacion-manhattan_1_2705516.html&tbnid=EzJj3hJr14i0DM&vet=12ahUKEwiWlKaciuX7AhVxlycCHUyQD0AQMygbegUIARCWAg..i&docid=WpFxKcXEBjzpQM&w=880&h=495&q=john%20von%20neumann&safe=active&ved=2ahUKEwiWlKaciuX7AhVxlycCHUyQD0AQMygbegUIARCWAg">CARRUSEL 2</a></li>
+          <li><a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.thenation.com%2Fwp-content%2Fuploads%2F2022%2F11%2FQian-Nirenberg-John_von_Neumann-illo.jpg&imgrefurl=https%3A%2F%2Fwww.thenation.com%2Farticle%2Fsociety%2Fjohn-von-neumann%2F&tbnid=4IHGLXdbT2cfkM&vet=12ahUKEwiWlKaciuX7AhVxlycCHUyQD0AQMyhAegQIARB9..i&docid=h9smRdfd0tSllM&w=1315&h=1000&q=john%20von%20neumann&safe=active&ved=2ahUKEwiWlKaciuX7AhVxlycCHUyQD0AQMyhAegQIARB9">CARRUSEL 3</a></li>
+          <li><a href="https://es.wikipedia.org/wiki/John_von_Neumann">INFORMACION</a></li>
+          <li>CONTACTO</li>
+          <li>Telefono: 666 66 66 66</li>
+          <li>Email: pablosolano@gmail.com</li>
+        </ul>
+          
+         
+      </footer>
+
+    </section>
+
+  </body>
+</html>
